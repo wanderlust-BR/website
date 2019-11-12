@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My webpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style try.css">
+ </head>
+
+<div class="main-container">
+
+
+<body>
+
+<!-- Side Navigation -->
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- Overlay content-->
+    <div class="overlay-content">
+      <a href="/pages/switzerland.html">Switzerland</a>
+      <a href="/pages/about.html">About</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
+<!-- Script Sidebar -->
+<script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+    
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+</script>
+
+<!-- Header -->
+<header class="hero-image">
+  <!-- Element to open/show the overlay navigation menu-->
+<span style="font-size:30px;cursor:pointer;float:right;margin:20px 30px 0 0;color:white" onclick="openNav()">&#9776;</span>
+    <div class="hero-text">
+      <h1>WANDERLUST</h1>
+      <h3>BELINDA RIEDER</h3>
+    </div>
+</header>
+
+<!-- Page content -->
+<!--Section text-->
+<section>
+  <div class="intro-container">
+    <p class="subsection-header">Where is your path taking you?</p>
+    <p class="subsection-text">"The real voyage of discovery consists <br>not in seeing new landscapes,<br> but in having new eyes."<br>Marcel Proust</p>
+  </div>
+</section>
+
+<!--Section images-->
+<div class="info-tiles">
+<div class="info-tile-row">
+  <a href="/pages/switzerland.html">
+  <img src="/images/general/bachalpsee.jpg" alt="Bachalpsee Bernese Oberland Switzerland" width=100% height=350px>
+  <div class="info-tile-overlay">
+    <div class="info-tile-text">Switzerland</div>
+  </div>
+  </a>
+</div>  
+<div class="info-tile-row">
+  <img src="/images/general/loch shiel.jpg" alt="Loch Shiel Highland Scotland" width=100% height=350px>
+  <div class="info-tile-overlay">
+    <div class="info-tile-text">Scotland<br>COMING SOON</div>
+  </div>
+</div>
+<div class="info-tile-row1">
+  <img src="/images/general/snowdon.jpg" alt="Snowdon Wales" width=100%>
+  <div class="info-tile-overlay">
+    <div class="info-tile-text">Wales<br>COMING SOON</div>
+  </div>
+</div>
+<div class="info-tile-row1">
+  <img src="/images/general/red house vaduz.jpg" alt="Red House Vaduz Liechtenstein" width=100%>
+</div>
+<div class="info-tile-row1">
+  <img src="/images/general/slieve league.jpg" alt="Slieve League Country Donegal Irland" width=100%>
+  <div class="info-tile-overlay">
+    <div class="info-tile-text">Ireland<br>COMING SOON</div>
+  </div>
+</div>
+</div>
+
+<!--Section value-->
+<div class="value-container">
+  <p class="subsection-header">Get inspired</p>
+  <p class="subsection-text">
+    and go hike to let your thoughts wander, enjoy the moment,<br>
+    clear your mind, spend time with a love one, find creativity,<br>
+    or simply be adventurous.
+</div>
+
+<!--Section idea-->
+<div style="background-image: url(forestbridge.jpg)">
+<div class="value-container">
+  <p class="subsection-header" style="color:white">Inspire</p>
+  <p class="subsection-text" style="color:white">kindly share your favorite hikes and places</p>
+  <button class="btn-share"><a class="btn-link" href="mailto:wanderlust.inspiring@gmail.com?subject=WANDERLUST INSPIRE">Share</a></button>
+</div>
+</div>
+
+<!--Section footer-->
+<footer>
+<div class="copyright">
+  <p>&copy; WANDERLUST BELINDA RIEDER</p>
+</div>
+</footer>
+
+</body>
+
+</div>
+
+</html>
