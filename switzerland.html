@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <title>Subpage Switzerland</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+
+</head>
+
+<div class="main-container">
+
+<body>
+
+<!-- Side Navigation -->
+  <!-- The overlay -->
+<div id="myNav" class="overlay">
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <!-- Overlay content-->
+  <div class="overlay-content">
+      <a href="index.html">Home</a>
+      <a href="pages/about.html">About</a>
+      <a href="#">Contact</a>
+    </div>
+</div>
+
+<!-- Script Sidebar -->
+<script>
+function openNav() {
+  document.getElementById("myNav").style.height = "100%";
+}
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+}
+</script>
+
+  <!-- Header -->
+<header>
+  <!-- Element to open/show the overlay navigation menu-->
+  <div class="logo">
+  <span style="font-size:30px;cursor:pointer;float:right;margin:10px 30px 0 0;color:black" onclick="openNav()">&#9776;</span>
+  <h1>WANDERLUST</h1>    
+  </div>
+  <div class="country-text">
+  <h1>Switzerland</h1>
+  </div>
+</header>
+
+<!--Section country description-->
+<section>
+    <div class="intro-container">
+      <p class="subsection-description">Switzerland is a mountainous Central European country, home to numerous lakes, villages and the high peaks of the Alps. Its cities contain medieval quarters, with landmarks like capital Bern’s Zytglogge clock tower and Lucerne’s wooden chapel bridge. The country is also known for its ski resorts and hiking trails. Banking and finance are key industries, and Swiss watches and chocolate are world renowned.</p>
+      <!-- source: IAPCO 2019, Destination, http://www.iapco2019.com/50th-annual-meeting-and-general-assembly-of-iapco/venue/destination.html-->
+    </div>
+</section>
+
+<!--Fitler buttons-->
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('hike')"> Hike</button>
+  <button class="btn" onclick="filterSelection('visit')"> Visit</button>
+</div>
+
+<!-- Article Gallery Grid -->
+<div class="category hike">
+  <div class="content">
+  <img src="images/switzerland/oechinensee/IMG_4212.jpg" alt="Oeschinensee Bernese Oberland Switzerland 14.09.19" style="width:100%">
+  <p class="article-type">HIKE</p>
+  <p class="article-title">OESCHINENSEE,<br>BERNESE OBERLAND</p>
+  <p class="article-text">CONTENT COMING SOON&hellip;</p>
+  </div>
+</div>
+
+<div class="category hike">
+  <div class="content">
+  <img src="images/switzerland/faulhornweg/IMG_3898.jpg" alt="Bachalpsee Bernese Oberland Switzerland 25.08.19" style="width:100%">
+  <p class="article-type">HIKE</p>
+  <p class="article-title">FAULHORNWEG (FIRST - BACHALPSEE - FAULHORN - SCHYNIGE PLATTE),<br>BERNESE OBERLAND</p>
+  <p class="article-text">CONTENT COMING SOON&hellip;</p>
+  </div>
+</div>
+
+<div class="category hike">
+  <div class="content">
+  <img src="images/switzerland/pilatus/IMG_3820.jpg" alt="Tomlishorn Switzerland 18.08.19" style="width:100%">
+  <p class="article-type">HIKE</p>
+  <p class="article-title">PILATUS HIKE, LUCERNE</p>
+  <p class="article-text">CONTENT COMING SOON&hellip;</p>
+  </div>
+</div>
+
+<div class="category hike">
+  <div class="content">
+  <img src="images/switzerland/zermatt/IMG_3458.jpg" alt="Matterhorn Switzerland 10.09.19" style="width:100%">
+  <p class="article-type">HIKE</p>
+  <p class="article-title">5 SEENWEG, ZERMATT</p>
+  <p class="article-text">CONTENT COMING SOON&hellip;</p>
+  </div>
+</div>
+
+<div class="category hike">
+  <div class="content">
+  <img src="images/switzerland/altesch/IMG_3447.jpg" alt="Aletsch Glacier Switzerland 09.07.19" style="width:100%">
+  <p class="article-type">HIKE</p>
+  <p class="article-title">ALETSCH GLACIER, VALAIS</p>
+  <p class="article-text">CONTENT COMING SOON&hellip;</p>
+  </div>
+</div>
+
+<div class="category visit">
+    <div class="content">
+    <img src="images/switzerland/bern/7465201760_ecac11ae59_b.jpg" alt="Bern Switzerland" style="width:100%" height="335px">
+    <p class="article-type">VISIT</p>
+    <p class="article-title">BERN</p>
+    <p class="article-text">CONTENT COMING SOON&hellip;</p>
+    </div>
+  </div>
+
+
+  
+<!--Script filter article-->    
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("category");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+</script>
+
+<footer>
+    <div class="copyright">
+      <p>&copy; WANDERLUST BELINDA RIEDER</p>
+    </div>
+</footer>
+
+</body>
+
+</div>
+
+</html>
