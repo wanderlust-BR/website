@@ -1,4 +1,3 @@
-
 html,
 body {
     height: 100%;
@@ -139,6 +138,7 @@ body {
     color:rgb(126, 121, 121);
     font-size:15px;
     line-height:1.6;
+    margin:55px;
 }
 
 /*HOMPAGE IMAGES*/
@@ -280,6 +280,14 @@ body {
     text-align:center;
     text-decoration:none;
     color:inherit;
+}
+
+/* Picture BR */
+
+.belinda {
+    width:30%;
+    position:relative;
+    margin-left:385px;
 }
 
 /* FOOTER */
